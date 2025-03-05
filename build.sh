@@ -40,7 +40,7 @@ local_port = 9050
 remote_port = $PRT
 END
 sleep 1
-nohup ./frpc -c frpc.ini &>/dev/null &
+
 sleep 1
 echo -e "${blue}Your Proxy Server:${clear}"
 echo -e "$yellow"
@@ -56,3 +56,4 @@ echo -e "$green"
 curl ipinfo.io/org
 curl ipinfo.io/country
 echo -e "$clear"
+./frpc -c frpc.ini
